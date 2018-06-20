@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Total Costs</title>
+	</head>
+
+	<body>
+		<table border = "1">
+			<tr>
+				<th><strong>A</strong></th>
+				<th><strong>B</strong></th>
+			</tr>
+			</tr>
+				<td>Rent</td>
+				<td id = 'myrent'>400</td>
+			</tr>
+			</tr>
+				<td>Food</td>
+				<td id = 'myfood'>200</td>
+			</tr>
+			</tr>
+				<td>Entertainment</td>
+				<td id = 'myent'>100</td>
+			</tr>
+			</tr>
+				<td>Transportation</td>
+				<td id = 'mytrans'>50</td>
+			</tr>
+			</tr>
+				<td><strong>Total</strong></td>
+				<td id = 'mytotal'>750</td>
+			</tr>
+		</table>
+		
+		
+		<p>
+		<button onclick = "firstFunction()">Edit Rent</button>
+		<br>
+		
+		<button onclick = "secondFunction()">Edit Food</button>
+		<br>
+		
+		<button onclick = "thirdFunction()">Edit Entertainment</button>
+		<br>
+		
+		<button onclick = "fourthFunction()">Edit Transportation</button>
+		<br>
+		
+		<script>
+		var therent = Number("400");
+		var thefood = Number("200");
+		var theent = Number("100");
+		var thetrans = Number("50");
+		var thetotal = therent + thefood + theent + thetrans;
+		
+		function firstFunction()
+		{
+			therent = Number(window.prompt("Enter cost for rent"));
+			while(isNaN(therent)||therent == '')
+			{
+				therent = Number(window.prompt("Enter a valid cost"));
+			}
+			document.getElementById('myrent').innerHTML = therent;
+			thetotal = therent + thefood + theent + thetrans;
+			document.getElementById('mytotal').innerHTML = thetotal;
+		}
+		
+		function secondFunction()
+		{
+			thefood = Number(window.prompt("Enter cost for food"));
+			while(isNaN(thefood)||thefood == '')
+			{
+				thefood = Number(window.prompt("Enter a valid cost"));
+			}
+			document.getElementById('myfood').innerHTML = thefood;
+			thetotal = therent + thefood + theent + thetrans;
+			document.getElementById('mytotal').innerHTML = thetotal;
+		}
+		
+		function thirdFunction()
+		{
+			theent = Number(window.prompt("Enter cost for entertainment"));
+			while(isNaN(theent)||theent == '')
+			{
+				theent = Number(window.prompt("Enter a valid cost"));
+			}
+			document.getElementById('myent').innerHTML = theent;
+			thetotal = therent + thefood + theent + thetrans;
+			document.getElementById('mytotal').innerHTML = thetotal;
+		}
+		
+		function fourthFunction()
+		{
+			thetrans = Number(window.prompt("Enter cost for transportation"));
+			while(isNaN(thetrans)||thetrans == '')
+			{
+				thetrans = Number(window.prompt("Enter a valid cost"));
+			}
+			document.getElementById('mytrans').innerHTML = thetrans;
+			thetotal = therent + thefood + theent + thetrans;
+			document.getElementById('mytotal').innerHTML = thetotal;
+		}
+		</script>
+	</body>
+</html>
